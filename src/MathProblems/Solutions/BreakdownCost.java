@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
-PROBLEM NUMBER 4
+PROBLEM NUMBER 4 
 
 Description:
 Calculating the breakdown cost
