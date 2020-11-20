@@ -24,6 +24,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -57,6 +60,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="880" y="98" key="#Project_Structure" timestamp="1605905045554">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="880" y="98" key="#Project_Structure/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605905045554" />
     <state x="1245" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1605897540977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
