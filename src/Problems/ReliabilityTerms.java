@@ -2,6 +2,8 @@ package Problems;
 
 
 import javax.sound.midi.Soundbank;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -23,10 +25,10 @@ Solved by Filip Trojanowski
  */
 public class ReliabilityTerms {
 
-    public void CalculationOfSpecificTerm(){
+    public double CalculationOfSpecificTerm(){
         Scanner scanner = new Scanner(System.in);
         int choice = 3;
-        double result;
+        double result = 0;
         while(true){
             try{
                 do {
@@ -37,14 +39,18 @@ public class ReliabilityTerms {
                     case 0-> {
                         System.out.println("You chose to calculate Reliability at confidence");
                         result = CalculatingReliabilityAtConfidence();
+                                System.out.println( "Result:\nRc = " + Math.round(result*100) + "%" );
+                        return result;
                     }
                     case 1->{
                         System.out.println("You chose to calculate Confidence level");
                         result = CalculatingConfidenceLevel();
+                        return result;
                     }
                     case 2-> {
                         System.out.println("You chose to calculate Sample size");
                         result = CalculatingSampleSize();
+                        return result;
                     }
                     default -> System.out.println("Error");
                 }
@@ -55,26 +61,45 @@ public class ReliabilityTerms {
             }
             break;
         }
+        return result;
     }
 
     public double CalculatingReliabilityAtConfidence(){
-
+        Scanner scanner = new Scanner(System.in);
+        double confidenceLevel = 0;
+        double sampleSize = 0;
+        double result = 0;
         while(true){
             try {
-                System.out.println("Set Confidence Level. For example: 0.90,0.23");
-
+                System.out.println("Set Confidence Level(%).[For example: 0,90, 0,23] :");
+                confidenceLevel = scanner.nextDouble();
+                System.out.println("C = " + confidenceLevel + "\nSet Sample Size.[For example: 4,7] :");
+                sampleSize = scanner.nextDouble();
+                System.out.println("C = " + confidenceLevel + ", n = " + sampleSize);
+                result = InsertDataForRc(confidenceLevel,sampleSize);
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("You put wrong type of input :(");
+                scanner.next();
+                continue;
             }
             break;
         }
-    return 0;
+    return result;
     }
     public double CalculatingConfidenceLevel(){
     return 0;
     }
     public double CalculatingSampleSize(){
     return 0;
+    }
+    public double InsertDataForRc(double confidenceLevel,double sampleSize){
+        double Rc = 0;
+        double power = 1/sampleSize;
+        double argument = 1 - confidenceLevel;
+        Rc = Math.pow(argument,power);
+
+//        System.out.println("Power = " + power + "  Argument = " + argument + " Rc = " + Rc );
+        return Rc;
     }
 
 }
