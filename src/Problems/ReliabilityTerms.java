@@ -41,11 +41,13 @@ public class ReliabilityTerms {
                     case 1->{
                         System.out.println("You chose to calculate Confidence level");
                         result = CalculatingConfidenceLevel();
+                        System.out.println( "Result:\nC = " + result + "%" );
                         return result;
                     }
                     case 2-> {
                         System.out.println("You chose to calculate Sample size");
                         result = CalculatingSampleSize();
+                        System.out.println( "Result:\nn = " + result );
                         return result;
                     }
                     default -> System.out.println("Error");
@@ -82,19 +84,62 @@ public class ReliabilityTerms {
         }
     return result;
     }
+    public double ProvidedDataForRc(double confidenceLevel,double sampleSize){
+        double Rc = Math.pow(1 - confidenceLevel,1/sampleSize);
+        return Math.round(Rc*100);
+    }
     public double CalculatingConfidenceLevel(){
-    return 0;
+        Scanner scanner = new Scanner(System.in);
+        double reliability = 0;
+        double sampleSize = 0;
+
+        double result = 0;
+        while(true){
+            try {
+                System.out.println("Set Reliability at confidence (%).[For example: 0,90, 0,23] :");
+                reliability = scanner.nextDouble();
+                System.out.println("Rc = " + reliability + "\nSet Sample Size.[For example: 4,7] :");
+                sampleSize = scanner.nextDouble();
+                System.out.println("Rc = " + reliability + ", n = " + sampleSize);
+                result = ProvidedDataForC(reliability,sampleSize);
+            }catch (InputMismatchException inputMismatchException){
+                System.out.println("You put wrong type of input :(");
+                scanner.next();
+                continue;
+            }
+            break;
+        }
+        return result;
+    }
+    public double ProvidedDataForC(double reliability,double sampleSize){
+        double C = 1 - Math.pow(reliability,sampleSize+1);
+        return Math.round(C*100);
     }
     public double CalculatingSampleSize(){
-    return 0;
+        Scanner scanner = new Scanner(System.in);
+        double reliability = 0;
+        double confidenceLevel = 0;
+        double result = 0;
+        while(true){
+            try {
+                System.out.println("Set Reliability at confidence (%).[For example: 0,90, 0,23] :");
+                reliability = scanner.nextDouble();
+                System.out.println("Rc = " + reliability + "\nSet Confidence Level(%).[For example: 0,90, 0,23] :");
+                confidenceLevel = scanner.nextDouble();
+                System.out.println("Rc = " + reliability + ", C = " + confidenceLevel);
+                result = ProvidedDataForN(reliability,confidenceLevel);
+            }catch (InputMismatchException inputMismatchException){
+                System.out.println("You put wrong type of input :(");
+                scanner.next();
+                continue;
+            }
+            break;
+        }
+        return result;
     }
-    public double ProvidedDataForRc(double confidenceLevel,double sampleSize){
-        double Rc = 0;
-        double power = 1/sampleSize;
-        double argument = 1 - confidenceLevel;
-        Rc = Math.pow(argument,power);
-//        System.out.println("Power = " + power + "  Argument = " + argument + " Rc = " + Rc );
-        return Math.round(Rc*100);
+    public double ProvidedDataForN(double reliability,double confidenceLevel){
+        double n = Math.log(1 - confidenceLevel)/Math.log(reliability) - 1;
+        return Math.round(n);
     }
 
 }
