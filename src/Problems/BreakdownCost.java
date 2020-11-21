@@ -1,4 +1,4 @@
-package MathProblems.Solutions;
+package Problems;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
