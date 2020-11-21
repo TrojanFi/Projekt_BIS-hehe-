@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
-PROBLEM NUMBER 4
+PROBLEM NUMBER 4 from file ch17pp.doc
 
 Description:
 Calculating the breakdown cost
@@ -22,7 +22,7 @@ Solved by Filip Trojanowski
 
 public class BreakdownCost {
 
-    public void BreakdownCost() {
+    public void BreakdownCostTest() {
         Scanner scanner = new Scanner(System.in);
         while(true) {
             try {

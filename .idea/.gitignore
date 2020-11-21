@@ -1,17 +1,3 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-.idea/
-.iml
-out/
-gen/
-idea-gitignore.jar
-resources/templates.list
-resources/gitignore/
-build/
-build.properties
-junit*.properties
-IgnoreLexer.java~
-.gradle
-.DS_Store
-/verification
