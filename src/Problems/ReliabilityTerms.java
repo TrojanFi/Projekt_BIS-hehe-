@@ -1,9 +1,5 @@
 package Problems;
 
-
-import javax.sound.midi.Soundbank;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -39,7 +35,7 @@ public class ReliabilityTerms {
                     case 0-> {
                         System.out.println("You chose to calculate Reliability at confidence");
                         result = CalculatingReliabilityAtConfidence();
-                                System.out.println( "Result:\nRc = " + Math.round(result*100) + "%" );
+                        System.out.println( "Result:\nRc = " + result + "%" );
                         return result;
                     }
                     case 1->{
@@ -76,7 +72,7 @@ public class ReliabilityTerms {
                 System.out.println("C = " + confidenceLevel + "\nSet Sample Size.[For example: 4,7] :");
                 sampleSize = scanner.nextDouble();
                 System.out.println("C = " + confidenceLevel + ", n = " + sampleSize);
-                result = InsertDataForRc(confidenceLevel,sampleSize);
+                result = ProvidedDataForRc(confidenceLevel,sampleSize);
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("You put wrong type of input :(");
                 scanner.next();
@@ -92,14 +88,13 @@ public class ReliabilityTerms {
     public double CalculatingSampleSize(){
     return 0;
     }
-    public double InsertDataForRc(double confidenceLevel,double sampleSize){
+    public double ProvidedDataForRc(double confidenceLevel,double sampleSize){
         double Rc = 0;
         double power = 1/sampleSize;
         double argument = 1 - confidenceLevel;
         Rc = Math.pow(argument,power);
-
 //        System.out.println("Power = " + power + "  Argument = " + argument + " Rc = " + Rc );
-        return Rc;
+        return Math.round(Rc*100);
     }
 
 }
