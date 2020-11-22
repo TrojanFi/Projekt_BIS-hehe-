@@ -1,4 +1,5 @@
 import Problems.ReliabilityTerms;
+import Problems.TestDuration;
 
 
 /*
@@ -10,9 +11,10 @@ public class Main {
 //        BreakdownCost breakdownCost = new BreakdownCost();
 //        breakdownCost.BreakdownCostTest();
 
-        ReliabilityTerms reliabilityTerms = new ReliabilityTerms();
-        reliabilityTerms.CalculationOfSpecificTerm();
-
+//        ReliabilityTerms reliabilityTerms = new ReliabilityTerms();
+//        reliabilityTerms.CalculationOfSpecificTerm();
+        TestDuration testDuration = new TestDuration();
+        testDuration.CalculatingTestDuration();
 
     }
 }

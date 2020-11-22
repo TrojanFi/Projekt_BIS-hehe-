@@ -6,6 +6,8 @@ import java.util.Scanner;
 /*
 
 RELATIONSHIP AMONG SAMPLE SIZE, CONFIDENCE AND RELIABILITY
+                        from
+QITT03 - Reliability Test Planing & Weibull Analysis.pdf
 
 Success-run theorem (Bayes’ formula)
  C = 1 - (Rc ) n+1
@@ -14,8 +16,6 @@ Where Rc = Reliability at confidence
  C = Confidence level
  n = Sample size
 Assumption: All samples tested at desired life and there is no failure.
-
-
 
 Solved by Filip Trojanowski
  */
