@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -24,12 +25,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Problems" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Moje pierdoły\Materiały_PJWSTK_semestr_5\BSI\Projekt01\Projekt_BSI\src" />
     </key>
@@ -38,6 +50,17 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Projekt_BSI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -56,8 +79,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605969128221</updated>
+      <workItem from="1606138513105" duration="670000" />
+      <workItem from="1606142038221" duration="37000" />
+      <workItem from="1606142126380" duration="10718000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="94" key="#Project_Structure" timestamp="1605969201886">
@@ -80,6 +109,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="916" height="196" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606044295588" />
+    <state x="320" y="79" key="SettingsEditor" timestamp="1606163176211">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="320" y="79" key="SettingsEditor/1680.-32.1920.1040/0.0.1680.1010@0.0.1680.1010" timestamp="1606163176211" />
+    <state x="611" y="311" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1606159837976">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="611" y="311" key="com.intellij.testIntegration.createTest.CreateTestDialog/1680.-32.1920.1040/0.0.1680.1010@0.0.1680.1010" timestamp="1606159837976" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605994045252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
