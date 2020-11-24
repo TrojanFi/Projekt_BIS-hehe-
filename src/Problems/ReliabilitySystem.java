@@ -28,10 +28,10 @@ Solution:
 Solved by Jakub Wiśniewski
 */
 public class ReliabilitySystem {
-    public double Relability(){
+    public double Reliability(){
         Scanner scanner = new Scanner(System.in);
         int choose,numberofsystem;
-        double relability,relability2,sum=1;
+        double reliability,reliability2,sum=1;
         while (true){
             try {
 
@@ -39,21 +39,21 @@ public class ReliabilitySystem {
                    numberofsystem = scanner.nextInt();
                    for(int i = 0 ; i <= numberofsystem - 1 ; i++) {
                        System.out.println(" Please enter the reliability of horizontal System : ");
-                       relability = scanner.nextDouble();
-                       if (relability > 0.99) {
-                           relability = relability / 100;
+                       reliability = scanner.nextDouble();
+                       if (reliability > 0.99) {
+                           reliability = reliability / 100;
                        }
                        System.out.println(" Does this system have an added vertical system ? ( 1 - yes 2 -no) : ");
                        choose = scanner.nextInt();
                        if (choose == 1) {
                            System.out.println(" Please enter the reliability of vertical System: ");
-                           relability2 = scanner.nextDouble();
-                           if (relability2 > 0.99) {
-                               relability2 = relability2 / 100;
+                           reliability2 = scanner.nextDouble();
+                           if (reliability2 > 0.99) {
+                               reliability2 = reliability2 / 100;
                            }
-                           sum = sum * ( relability + relability2 * ( 1 - relability ));
+                           sum = sum * ( reliability + reliability2 * ( 1 - reliability ));
                        } else if (choose == 2) {
-                          sum = sum * relability;
+                          sum = sum * reliability;
                        } else {
                            System.out.println(" You can only choose 1 or 2 ");
                        }
@@ -67,6 +67,6 @@ public class ReliabilitySystem {
             }
             break;
         }
-        return 0;
+        return sum*100;
     }
 }

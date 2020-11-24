@@ -59,7 +59,7 @@ ch17pp.doc
                         footballTeams.FootBall();
                     }
                     case 5 -> {
-                        reliabilitySystem.Relability();
+                        reliabilitySystem.Reliability();
                     }
                     case 6 -> {
                         System.out.println("You exit the program");

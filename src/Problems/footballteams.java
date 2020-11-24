@@ -24,7 +24,7 @@ Solved by Jakub Wiśniewski
 */
 public class FootballTeams {
 
-    public double FootBall(){
+    public void FootBall(){
         Scanner scanner = new Scanner(System.in);
         double draw;
         while (true){
@@ -74,6 +74,6 @@ public class FootballTeams {
             }
             break;
         }
-        return 0;
+
     }
 }
