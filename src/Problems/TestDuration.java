@@ -43,7 +43,7 @@ public class TestDuration {
                     weibull = scanner.nextDouble();
                 }while (miles == 0 || reliability == 0 || confidence == 0 || sampleSize ==0 || weibull ==0);
                 result = ProvidedDataForTestDuration(miles,reliability,confidence,sampleSize,weibull);
-                System.out.println("Test Duration = " + result + " hours");
+                System.out.println("Test Duration = " + result + " miles");
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("Bad input :(");
                 scanner.next();
