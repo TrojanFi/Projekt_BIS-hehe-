@@ -20,7 +20,7 @@ Project Created by: Filip Trojanowski and Jakub Wiśniewski
 //            testDuration.CalculatingTestDuration();
 
             FootballTeams footballTeams = new FootballTeams();
-            footballTeams.FootBall(5);
+            footballTeams.FootBall();
 
     }
 }
