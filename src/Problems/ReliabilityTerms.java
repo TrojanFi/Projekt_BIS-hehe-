@@ -23,7 +23,7 @@ public class ReliabilityTerms {
 
     public void CalculationOfSpecificTerm(){
         Scanner scanner = new Scanner(System.in);
-        int choice = 3;
+        int choice;
         while(true){
             try{
                 do {
@@ -56,9 +56,7 @@ public class ReliabilityTerms {
 
     public double CalculatingReliabilityAtConfidence(){
         Scanner scanner = new Scanner(System.in);
-        double confidenceLevel = 0;
-        double sampleSize = 0;
-        double result = 0;
+        double confidenceLevel,sampleSize,result;
         while(true){
             try {
                 System.out.println("Set Confidence Level (C).[For example: 0,90, 0,23] :");
@@ -83,9 +81,7 @@ public class ReliabilityTerms {
     }
     public double CalculatingConfidenceLevel(){
         Scanner scanner = new Scanner(System.in);
-        double reliability = 0;
-        double sampleSize = 0;
-        double result = 0;
+        double reliability,sampleSize,result;
         while(true){
             try {
                 System.out.println("Set Reliability at confidence (Rc).[For example: 0,90, 0,23] :");
@@ -110,9 +106,7 @@ public class ReliabilityTerms {
     }
     public double CalculatingSampleSize(){
         Scanner scanner = new Scanner(System.in);
-        double reliability = 0;
-        double confidenceLevel = 0;
-        double result = 0;
+        double reliability,confidenceLevel,result;
         while(true){
             try {
                 System.out.println("Set Reliability at confidence (Rc).[For example: 0,90, 0,23] :");

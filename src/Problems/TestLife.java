@@ -22,12 +22,7 @@ public class TestLife {
 
     public void CalculatingTestLife(){
         Scanner scanner = new Scanner(System.in);
-        double miles;
-        double reliability;
-        double confidence;
-        double sampleSize;
-        double weibull;
-        double result;
+        double miles,reliability,confidence,sampleSize,weibull;
         while(true){
             try{
                 do {
@@ -42,8 +37,7 @@ public class TestLife {
                     System.out.println("Give Weibull.[For example: 2]");
                     weibull = scanner.nextDouble();
                 }while (miles == 0 || reliability == 0 || confidence == 0 || sampleSize ==0 || weibull ==0);
-                result = ProvidedDataForTestLife(miles,reliability,confidence,sampleSize,weibull);
-                System.out.println("Test life = " + result + " miles");
+                System.out.println("Test life = " + ProvidedDataForTestLife(miles,reliability,confidence,sampleSize,weibull) + " miles");
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("Bad input :(");
                 scanner.next();
