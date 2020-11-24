@@ -20,7 +20,7 @@ Example for :
 
 Solution:
 1.Ask for number of horizontal systems
-2.Ask for relabilities of horizontal system
+2.Ask for reliabilities of horizontal system
 3. ask does this system have an added vertical system
 4.if yes or no use other patterns
 5.loop from 2. to 4 n times where n is number of horizontal systems

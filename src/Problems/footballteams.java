@@ -34,10 +34,18 @@ public class FootballTeams {
                 double chance_for_b,chance_for_a,b_won_all,b_won_min_one,b_lose_all,b_lose;
                 System.out.println("How many rounds :");
                 numberofrounds = scanner.nextInt();
+                int z=(numberofrounds -3);
                     System.out.println("What is a chance for win team a in percent(example 0,5)? :");
                     chance_for_a = scanner.nextDouble();
+
+                if (chance_for_a > 0.99) {
+                    chance_for_a = chance_for_a / 100;
+                }
                     System.out.println("What is a chance for win team b in percent(example 0,3)? :");
                     chance_for_b = scanner.nextDouble();
+                if (chance_for_b > 0.99) {
+                    chance_for_b = chance_for_b / 100;
+                }
 
                     draw = 1 - (chance_for_a + chance_for_b);
                     /*a)*/System.out.println("Chance for draw is equal = " + Math.round(draw * 100) + " %");
@@ -47,7 +55,7 @@ public class FootballTeams {
                 {
                     b_won_all = b_won_all * chance_for_b;
                 }
-                /*b)*/ System.out.println("Chance for won all by b is equal : "+ b_won_all * 100 + " %");
+                /*b)*/ System.out.println("Chance for won all by b is equal : "+ b_won_all * Math.pow(10, numberofrounds-z) + " %");
                 b_won_min_one = chance_for_b;
                 b_lose = 1 - chance_for_b;
                 b_lose_all = b_lose;
