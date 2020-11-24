@@ -34,7 +34,7 @@ public class FootballTeams {
                     chance_for_a = scanner.nextDouble();
                     System.out.println("What is a chance for win team b (example 30)? :");
                     chance_for_b = scanner.nextDouble();
-                   draw = 100 - ((chance_for_a+chance_for_b));
+                   draw = 1 - ((chance_for_a+chance_for_b));
                 System.out.println("Chance for draw is equal = " + draw);
 
                 b_won_all = chance_for_b/10;
