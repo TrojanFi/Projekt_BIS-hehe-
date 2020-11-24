@@ -2,6 +2,7 @@ import Problems.BreakdownCost;
 import Problems.ReliabilityTerms;
 import Problems.TestDuration;
 import Problems.FootballTeams;
+import Problems.ReliabilitySystem;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -18,6 +19,7 @@ Project Created by: Filip Trojanowski and Jakub Wiśniewski
             ReliabilityTerms reliabilityTerms = new ReliabilityTerms();
             TestDuration testDuration = new TestDuration();
             FootballTeams footballTeams = new FootballTeams();
+            ReliabilitySystem reliabilitySystem = new ReliabilitySystem();
 
 
 
@@ -48,6 +50,7 @@ Project Created by: Filip Trojanowski and Jakub Wiśniewski
                         footballTeams.FootBall();
                     }
                     case 5 -> {
+                        reliabilitySystem.Relability();
                     }
                     case 6 -> {
                         System.out.println("You exit the program");
