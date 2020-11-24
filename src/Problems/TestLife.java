@@ -22,12 +22,7 @@ public class TestLife {
 
     public void CalculatingTestLife(){
         Scanner scanner = new Scanner(System.in);
-        double miles;
-        double reliability;
-        double confidence;
-        double sampleSize;
-        double weibull;
-        double result;
+        double miles,reliability,confidence,sampleSize,weibull,result;
         while(true){
             try{
                 do {
