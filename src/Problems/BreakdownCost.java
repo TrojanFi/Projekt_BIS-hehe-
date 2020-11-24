@@ -28,10 +28,10 @@ public class BreakdownCost {
             try {
                 System.out.println("Give me number of tests:");
                 int numberOfTests = scanner.nextInt();
-                double expectedNumberOfBreakDowns = NumberOfBreakdowns(numberOfTests);
+                double expectedNumberOfBreakdowns = NumberOfBreakdowns(numberOfTests);
                 System.out.println("Give me a cost of one breakdown ($):");
                 double cost = scanner.nextDouble();
-                System.out.println("Expected breakdown cost:\n$" + cost*expectedNumberOfBreakDowns + "/day");
+                System.out.println("Expected breakdown cost:\n$" + cost*expectedNumberOfBreakdowns + "/day");
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("Bad type of input :(");
                 scanner.next();
@@ -44,18 +44,18 @@ public class BreakdownCost {
 
     public double NumberOfBreakdowns(int numberOfTests){
         Scanner scanner = new Scanner(System.in);
-        double expectedNumberOfBreakDowns;
+        double expectedNumberOfBreakdowns;
         while (true){
             try {
-                expectedNumberOfBreakDowns = 0;
-                double numberOfBreakDowns,dailyProbability;
+                expectedNumberOfBreakdowns = 0;
+                double numberOfBreakdowns,dailyFrequency;
                 for(int i = 0; i < numberOfTests;i++){
-                    System.out.println("Put Number of Breakdowns for test[" + i + "]:");
-                    numberOfBreakDowns = scanner.nextDouble();
-                    System.out.println("Put Daily Probability for test[" + i + "]:");
-                    dailyProbability = scanner.nextDouble();
-                    expectedNumberOfBreakDowns += numberOfBreakDowns * (dailyProbability/10);
-                    System.out.println("Expected number of breakdowns = " + expectedNumberOfBreakDowns + " breakdowns/day");
+                    System.out.println("Put Number of Breakdowns for test[" + i + "].[For example: 3, 4, 9]:");
+                    numberOfBreakdowns = scanner.nextDouble();
+                    System.out.println("Put Daily Frequency for test[" + i + "].[For example: 3, 4, 9]:");
+                    dailyFrequency = scanner.nextDouble();
+                    expectedNumberOfBreakdowns += numberOfBreakdowns * (dailyFrequency/10);
+                    System.out.println("Expected number of breakdowns = " + expectedNumberOfBreakdowns + " breakdowns/day");
                 }
 
             }catch (InputMismatchException exception){
@@ -65,6 +65,6 @@ public class BreakdownCost {
             }
             break;
         }
-        return expectedNumberOfBreakDowns;
+        return expectedNumberOfBreakdowns;
     }
 }
