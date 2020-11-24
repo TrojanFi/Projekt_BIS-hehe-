@@ -55,7 +55,7 @@ public class FootballTeams {
                 {
                     b_won_all = b_won_all * chance_for_b;
                 }
-                /*b)*/ System.out.println("Chance for won all by b is equal : "+ b_won_all * Math.pow(10, numberofrounds-z) + " %");
+                /*b)*/ System.out.println("Chance for won all by b is equal : "+ b_won_all * 100 + " %");
                 b_won_min_one = chance_for_b;
                 b_lose = 1 - chance_for_b;
                 b_lose_all = b_lose;
