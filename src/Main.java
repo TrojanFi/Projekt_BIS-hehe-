@@ -38,7 +38,7 @@ ch17pp.doc
             do{
                 try {
                     System.out.println("Please select a problem:");
-                    System.out.println("[1] - Breakdown Cost\n[2] - Calculation of specific term (Rc,C,n)\n[3] - Calculation of test life\n[4] - Calculation of winning the match (Football)\n[5] - Calculation of Reliability System \n[6] - Exit the program");
+                    System.out.println("[1] - Breakdown Cost\n[2] - Calculation of specific term (Rc,C,n)\n[3] - Calculation of test duration\n[4] - Calculation of winning the match (Football)\n[5] - Calculation of Reliability System \n[6] - Exit the program");
                     choice = scanner.nextInt();
                 }catch (InputMismatchException inputMismatchException){
                     System.out.println("Wrong input try again :(");
