@@ -15,8 +15,10 @@ P(B loses three matches)=P(B lose 1st match)*P(B lose 2nd match)*P(B lose 3rd)
 P(B wins at least one match) = 100% - P(B loses three matches)
 
 Solution:
-Create Test which have "Number of Breakdowns" and "Daily Frequency" and sum the result using the pattern.
-If we have more rounds we multiplie more times the results which need multiplie.
+1.Ask for number of rounds
+2.Ask for chance for win a team
+3.Ask for chance for win b team
+4.Use patterns
 
 Solved by Jakub Wiśniewski
 */
