@@ -1,6 +1,6 @@
 import Problems.BreakdownCost;
 import Problems.ReliabilityTerms;
-import Problems.TestDuration;
+import Problems.TestLife;
 import Problems.FootballTeams;
 import Problems.ReliabilitySystem;
 
@@ -11,13 +11,22 @@ import java.util.Scanner;
 /*
 Project Created by: Filip Trojanowski and Jakub Wiśniewski
 
+Task:
+Creating Calculators for problems in given materials
+
+Materials:
+QITT03 - Reliability Test Planing & Weibull Analysis.pdf
+reliability.pdf
+ch17pp.doc
+
+
  */
     public class Main {
         public static void main(String[] args) {
 
             BreakdownCost breakdownCost = new BreakdownCost();
             ReliabilityTerms reliabilityTerms = new ReliabilityTerms();
-            TestDuration testDuration = new TestDuration();
+            TestLife testDuration = new TestLife();
             FootballTeams footballTeams = new FootballTeams();
             ReliabilitySystem reliabilitySystem = new ReliabilitySystem();
 
@@ -44,7 +53,7 @@ Project Created by: Filip Trojanowski and Jakub Wiśniewski
                         reliabilityTerms.CalculationOfSpecificTerm();
                     }
                     case 3 -> {
-                        testDuration.CalculatingTestDuration();
+                        testDuration.CalculatingTestLife();
                     }
                     case 4 -> {
                         footballTeams.FootBall();

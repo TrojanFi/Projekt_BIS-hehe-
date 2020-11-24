@@ -18,16 +18,16 @@ Creating a calculator with data given from a user. Use formula from example 2.1.
 
 Solved by Filip Trojanowski
 */
-public class TestDuration {
+public class TestLife {
 
-    public double CalculatingTestDuration(){
+    public double CalculatingTestLife(){
         Scanner scanner = new Scanner(System.in);
-        double miles = 0;
-        double reliability = 0;
-        double confidence = 0;
-        double sampleSize = 0;
-        double weibull = 0;
-        double result = 172000;
+        double miles;
+        double reliability;
+        double confidence;
+        double sampleSize;
+        double weibull;
+        double result;
         while(true){
             try{
                 do {
@@ -38,12 +38,12 @@ public class TestDuration {
                     System.out.println("Give the confidence %.[For example: 0,6]:");
                     confidence = scanner.nextDouble();
                     System.out.println("Give available sample size.[For example: 6]");
-                    sampleSize = scanner.nextDouble();
+                    sampleSize = Math.round(scanner.nextDouble());
                     System.out.println("Give Weibull.[For example: 2]");
                     weibull = scanner.nextDouble();
                 }while (miles == 0 || reliability == 0 || confidence == 0 || sampleSize ==0 || weibull ==0);
-                result = ProvidedDataForTestDuration(miles,reliability,confidence,sampleSize,weibull);
-                System.out.println("Test Duration = " + result + " miles");
+                result = ProvidedDataForTestLife(miles,reliability,confidence,sampleSize,weibull);
+                System.out.println("Test life = " + result + " miles");
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("Bad input :(");
                 scanner.next();
@@ -53,8 +53,9 @@ public class TestDuration {
         }
         return result;
     }
-    public double ProvidedDataForTestDuration(double miles, double reliability, double confidence, double sampleSize, double weibull){
+    public double ProvidedDataForTestLife(double miles, double reliability, double confidence, double sampleSize, double weibull){
         double result = miles*(Math.pow(((1/sampleSize)*Math.log(1/(1-confidence)))/(Math.log(1/(reliability))),(1/weibull)));
+        System.out.println("Calculated result without rounding:\n" + result);
         return Math.abs(Math.round(result));
     }
 }

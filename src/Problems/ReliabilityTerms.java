@@ -69,10 +69,10 @@ public class ReliabilityTerms {
         double result = 0;
         while(true){
             try {
-                System.out.println("Set Confidence Level(%).[For example: 0,90, 0,23] :");
+                System.out.println("Set Confidence Level (C).[For example: 0,90, 0,23] :");
                 confidenceLevel = scanner.nextDouble();
-                System.out.println("C = " + confidenceLevel + "\nSet Sample Size.[For example: 4,7] :");
-                sampleSize = scanner.nextDouble();
+                System.out.println("C = " + confidenceLevel + "\nSet Sample Size (n).[For example: 4,7] :");
+                sampleSize = Math.round(scanner.nextDouble());
                 System.out.println("C = " + confidenceLevel + ", n = " + sampleSize);
                 result = ProvidedDataForRc(confidenceLevel,sampleSize);
             }catch (InputMismatchException inputMismatchException){
@@ -86,6 +86,7 @@ public class ReliabilityTerms {
     }
     public double ProvidedDataForRc(double confidenceLevel,double sampleSize){
         double Rc = Math.pow(1 - confidenceLevel,1/sampleSize);
+        System.out.println("Calculated result without rounding:\n" + Rc * 100);
         return Math.round(Rc*100);
     }
     public double CalculatingConfidenceLevel(){
@@ -96,10 +97,10 @@ public class ReliabilityTerms {
         double result = 0;
         while(true){
             try {
-                System.out.println("Set Reliability at confidence (%).[For example: 0,90, 0,23] :");
+                System.out.println("Set Reliability at confidence (Rc).[For example: 0,90, 0,23] :");
                 reliability = scanner.nextDouble();
-                System.out.println("Rc = " + reliability + "\nSet Sample Size.[For example: 4,7] :");
-                sampleSize = scanner.nextDouble();
+                System.out.println("Rc = " + reliability + "\nSet Sample Size (n).[For example: 4,7] :");
+                sampleSize = Math.round(scanner.nextDouble());
                 System.out.println("Rc = " + reliability + ", n = " + sampleSize);
                 result = ProvidedDataForC(reliability,sampleSize);
             }catch (InputMismatchException inputMismatchException){
@@ -113,6 +114,7 @@ public class ReliabilityTerms {
     }
     public double ProvidedDataForC(double reliability,double sampleSize){
         double C = 1 - Math.pow(reliability,sampleSize+1);
+        System.out.println("Calculated result without rounding:\n" + C * 100);
         return Math.round(C*100);
     }
     public double CalculatingSampleSize(){
@@ -122,9 +124,9 @@ public class ReliabilityTerms {
         double result = 0;
         while(true){
             try {
-                System.out.println("Set Reliability at confidence (%).[For example: 0,90, 0,23] :");
+                System.out.println("Set Reliability at confidence (Rc).[For example: 0,90, 0,23] :");
                 reliability = scanner.nextDouble();
-                System.out.println("Rc = " + reliability + "\nSet Confidence Level(%).[For example: 0,90, 0,23] :");
+                System.out.println("Rc = " + reliability + "\nSet Confidence Level (C).[For example: 0,90, 0,23] :");
                 confidenceLevel = scanner.nextDouble();
                 System.out.println("Rc = " + reliability + ", C = " + confidenceLevel);
                 result = ProvidedDataForN(reliability,confidenceLevel);
@@ -139,6 +141,7 @@ public class ReliabilityTerms {
     }
     public double ProvidedDataForN(double reliability,double confidenceLevel){
         double n = Math.log(1 - confidenceLevel)/Math.log(reliability) - 1;
+        System.out.println("Calculated result without rounding:\n" + n);
         return Math.round(n);
     }
 
