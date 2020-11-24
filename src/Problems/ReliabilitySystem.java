@@ -28,7 +28,7 @@ Solution:
 Solved by Jakub Wiśniewski
 */
 public class ReliabilitySystem {
-    public double Reliability(){
+    public void Reliability(){
         Scanner scanner = new Scanner(System.in);
         int choose,numberofsystem;
         double reliability,reliability2,sum=1;
@@ -67,6 +67,6 @@ public class ReliabilitySystem {
             }
             break;
         }
-        return sum*100;
+
     }
 }
