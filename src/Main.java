@@ -35,6 +35,7 @@ ch17pp.doc
             Scanner scanner = new Scanner(System.in);
             int choice;
             boolean status = true;
+            double result = 0;
             do{
                 try {
                     System.out.println("Please select a problem:");
@@ -47,22 +48,22 @@ ch17pp.doc
                 }
                 switch (choice){
                     case 1 -> {
-                        breakdownCost.BreakdownCostTest();
+                        result = breakdownCost.BreakdownCostTest();
                     }
                     case 2 -> {
-                        reliabilityTerms.CalculationOfSpecificTerm();
+                        result = reliabilityTerms.CalculationOfSpecificTerm();
                     }
                     case 3 -> {
-                        testDuration.CalculatingTestLife();
+                        result = testDuration.CalculatingTestLife();
                     }
                     case 4 -> {
                         footballTeams.FootBall();
                     }
                     case 5 -> {
-                        reliabilitySystem.Reliability();
+                        result = reliabilitySystem.Reliability();
                     }
                     case 6 -> {
-                        System.out.println("You exit the program");
+                        System.out.println("Last received result:" + result + "You exit the program");
                         status = false;
                     }
                     default -> {
