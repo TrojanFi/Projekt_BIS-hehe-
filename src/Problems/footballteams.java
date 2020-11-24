@@ -20,7 +20,7 @@ If we have more rounds we multiplie more times the results which need multiplie.
 
 Solved by Jakub Wiśniewski
 */
-public class footballteams {
+public class FootballTeams {
 
     public double FootBall(int numberofrounds){
         Scanner scanner = new Scanner(System.in);
