@@ -20,7 +20,7 @@ Solved by Filip Trojanowski
 */
 public class TestLife {
 
-    public double CalculatingTestLife(){
+    public void CalculatingTestLife(){
         Scanner scanner = new Scanner(System.in);
         double miles;
         double reliability;
@@ -51,7 +51,6 @@ public class TestLife {
             }
             break;
         }
-        return result;
     }
     public double ProvidedDataForTestLife(double miles, double reliability, double confidence, double sampleSize, double weibull){
         double result = miles*(Math.pow(((1/sampleSize)*Math.log(1/(1-confidence)))/(Math.log(1/(reliability))),(1/weibull)));

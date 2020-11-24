@@ -21,10 +21,9 @@ Solved by Filip Trojanowski
  */
 public class ReliabilityTerms {
 
-    public double CalculationOfSpecificTerm(){
+    public void CalculationOfSpecificTerm(){
         Scanner scanner = new Scanner(System.in);
         int choice = 3;
-        double result = 0;
         while(true){
             try{
                 do {
@@ -34,21 +33,15 @@ public class ReliabilityTerms {
                 switch (choice){
                     case 0-> {
                         System.out.println("You chose to calculate Reliability at confidence");
-                        result = CalculatingReliabilityAtConfidence();
-                        System.out.println( "Result:\nRc = " + result + "%" );
-                        return result;
+                        System.out.println( "Result:\nRc = " + CalculatingReliabilityAtConfidence() + "%" );
                     }
                     case 1->{
                         System.out.println("You chose to calculate Confidence level");
-                        result = CalculatingConfidenceLevel();
-                        System.out.println( "Result:\nC = " + result + "%" );
-                        return result;
+                        System.out.println( "Result:\nC = " + CalculatingConfidenceLevel() + "%" );
                     }
                     case 2-> {
                         System.out.println("You chose to calculate Sample size");
-                        result = CalculatingSampleSize();
-                        System.out.println( "Result:\nn = " + result );
-                        return result;
+                        System.out.println( "Result:\nn = " + CalculatingSampleSize() );
                     }
                     default -> System.out.println("Error");
                 }
@@ -59,7 +52,6 @@ public class ReliabilityTerms {
             }
             break;
         }
-        return result;
     }
 
     public double CalculatingReliabilityAtConfidence(){
@@ -93,7 +85,6 @@ public class ReliabilityTerms {
         Scanner scanner = new Scanner(System.in);
         double reliability = 0;
         double sampleSize = 0;
-
         double result = 0;
         while(true){
             try {

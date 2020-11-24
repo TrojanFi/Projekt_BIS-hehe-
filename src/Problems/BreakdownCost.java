@@ -22,9 +22,8 @@ Solved by Filip Trojanowski
 
 public class BreakdownCost {
 
-    public double BreakdownCostTest() {
+    public void BreakdownCostTest() {
         Scanner scanner = new Scanner(System.in);
-        double result;
         while(true) {
             try {
                 System.out.println("Give me number of tests:");
@@ -33,7 +32,6 @@ public class BreakdownCost {
                 System.out.println("Give me a cost of one breakdown ($):");
                 double cost = scanner.nextDouble();
                 System.out.println("Expected breakdown cost:\n$" + cost*expectedNumberOfBreakdowns + "/day");
-                result = cost*expectedNumberOfBreakdowns;
             }catch (InputMismatchException inputMismatchException){
                 System.out.println("Bad type of input :(");
                 scanner.next();
@@ -41,7 +39,6 @@ public class BreakdownCost {
             }
             break;
         }
-        return result;
     }
 
     public double NumberOfBreakdowns(int numberOfTests){
