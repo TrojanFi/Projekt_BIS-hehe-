@@ -13,8 +13,9 @@ public class Main {
 
 //        ReliabilityTerms reliabilityTerms = new ReliabilityTerms();
 //        reliabilityTerms.CalculationOfSpecificTerm();
-        TestDuration testDuration = new TestDuration();
-        testDuration.CalculatingTestDuration();
+
+//        TestDuration testDuration = new TestDuration();
+//        testDuration.CalculatingTestDuration();
 
     }
 }
